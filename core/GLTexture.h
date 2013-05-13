@@ -12,6 +12,9 @@
 
 @property(nonatomic,retain) NSString *textureFileName;
 
+@property(nonatomic,readonly) CGFloat width;
+
+@property(nonatomic,readonly) CGFloat height;
 /**
  * init the texture
  */

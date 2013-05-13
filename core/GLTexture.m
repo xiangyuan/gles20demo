@@ -13,6 +13,8 @@
     GLuint texture[1];
 }
 @synthesize textureFileName;
+@synthesize width,height;
+
 
 /**
  * init the texture
@@ -37,14 +39,15 @@
         // read the 2d sample data
 //        NSData * data = [NSData dataWithContentsOfFile:filePath];
         CGImageRef imageref = [UIImage imageNamed:fileName].CGImage;
-        GLuint width = CGImageGetWidth(imageref);
-        GLuint height = CGImageGetHeight(imageref);
+        width = CGImageGetWidth(imageref);
+        height = CGImageGetHeight(imageref);
+        NSLog(@"%f %f",width,height);
         void *imageData = malloc(width * height * 4);
          CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
         CGContextRef context = CGBitmapContextCreate(imageData, width, height, 8, 4 * width, colorSpace, kCGImageAlphaPremultipliedLast| kCGBitmapByteOrder32Big);
         CGContextTranslateCTM(context, 0, height);
         CGContextScaleCTM(context, 1.0, -1.0);
-        CGContextClearRect(context, CGRectMake(0, 0, width, height));
+//        CGContextClearRect(context, CGRectMake(0, 0, width, height));
         CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageref);
         
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
