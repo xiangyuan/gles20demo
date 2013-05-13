@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1436592F17407FAA00CE31CB /* aabb.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436591F17407FAA00CE31CB /* aabb.c */; };
+		1436593017407FAA00CE31CB /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = 1436592017407FAA00CE31CB /* ChangeLog */; };
+		1436593117407FAA00CE31CB /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1436592117407FAA00CE31CB /* CMakeLists.txt */; };
+		1436593217407FAA00CE31CB /* mat4stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592317407FAA00CE31CB /* mat4stack.c */; };
+		1436593317407FAA00CE31CB /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592417407FAA00CE31CB /* matrix.c */; };
+		1436593417407FAA00CE31CB /* mat3.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592517407FAA00CE31CB /* mat3.c */; };
+		1436593517407FAA00CE31CB /* mat4.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592617407FAA00CE31CB /* mat4.c */; };
+		1436593617407FAA00CE31CB /* neon_matrix_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592717407FAA00CE31CB /* neon_matrix_impl.c */; };
+		1436593717407FAA00CE31CB /* plane.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592817407FAA00CE31CB /* plane.c */; };
+		1436593817407FAA00CE31CB /* quaternion.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592917407FAA00CE31CB /* quaternion.c */; };
+		1436593917407FAA00CE31CB /* ray2.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592A17407FAA00CE31CB /* ray2.c */; };
+		1436593A17407FAA00CE31CB /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592B17407FAA00CE31CB /* utility.c */; };
+		1436593B17407FAA00CE31CB /* vec2.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592C17407FAA00CE31CB /* vec2.c */; };
+		1436593C17407FAA00CE31CB /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592D17407FAA00CE31CB /* vec3.c */; };
+		1436593D17407FAA00CE31CB /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 1436592E17407FAA00CE31CB /* vec4.c */; };
+		14365940174080A000CE31CB /* GLShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1436593F174080A000CE31CB /* GLShader.m */; };
+		143659421740BFA100CE31CB /* wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 143659411740BFA100CE31CB /* wheel.png */; };
 		1438CCB51732483F00AE0295 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1438CCB41732483F00AE0295 /* UIKit.framework */; };
 		1438CCB71732483F00AE0295 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1438CCB61732483F00AE0295 /* Foundation.framework */; };
 		1438CCB91732483F00AE0295 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1438CCB81732483F00AE0295 /* CoreGraphics.framework */; };
@@ -26,13 +43,41 @@
 		14D55B1F1733AC530060CF4B /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D55B191733AC530060CF4B /* GLTexture.m */; };
 		14D55B201733AC530060CF4B /* GLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D55B1B1733AC530060CF4B /* GLView.m */; };
 		14D55B211733AC530060CF4B /* vertext.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 14D55B1C1733AC530060CF4B /* vertext.vsh */; };
-		14D55B2C1733AC770060CF4B /* CC3Foundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D55B231733AC770060CF4B /* CC3Foundation.m */; };
-		14D55B2D1733AC770060CF4B /* CC3GLMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D55B251733AC770060CF4B /* CC3GLMatrix.m */; };
-		14D55B2E1733AC770060CF4B /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 14D55B261733AC770060CF4B /* CC3Kazmath.c */; };
-		14D55B2F1733AC770060CF4B /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D55B2A1733AC770060CF4B /* CC3Math.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1436590F17407FAA00CE31CB /* aabb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aabb.h; sourceTree = "<group>"; };
+		1436591117407FAA00CE31CB /* mat4stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mat4stack.h; sourceTree = "<group>"; };
+		1436591217407FAA00CE31CB /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		1436591317407FAA00CE31CB /* kazmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kazmath.h; sourceTree = "<group>"; };
+		1436591417407FAA00CE31CB /* mat3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mat3.h; sourceTree = "<group>"; };
+		1436591517407FAA00CE31CB /* mat4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mat4.h; sourceTree = "<group>"; };
+		1436591617407FAA00CE31CB /* neon_matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neon_matrix_impl.h; sourceTree = "<group>"; };
+		1436591717407FAA00CE31CB /* plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plane.h; sourceTree = "<group>"; };
+		1436591817407FAA00CE31CB /* quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quaternion.h; sourceTree = "<group>"; };
+		1436591917407FAA00CE31CB /* ray2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ray2.h; sourceTree = "<group>"; };
+		1436591A17407FAA00CE31CB /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
+		1436591B17407FAA00CE31CB /* vec2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec2.h; sourceTree = "<group>"; };
+		1436591C17407FAA00CE31CB /* vec3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec3.h; sourceTree = "<group>"; };
+		1436591D17407FAA00CE31CB /* vec4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec4.h; sourceTree = "<group>"; };
+		1436591F17407FAA00CE31CB /* aabb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aabb.c; sourceTree = "<group>"; };
+		1436592017407FAA00CE31CB /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		1436592117407FAA00CE31CB /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		1436592317407FAA00CE31CB /* mat4stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mat4stack.c; sourceTree = "<group>"; };
+		1436592417407FAA00CE31CB /* matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
+		1436592517407FAA00CE31CB /* mat3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mat3.c; sourceTree = "<group>"; };
+		1436592617407FAA00CE31CB /* mat4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mat4.c; sourceTree = "<group>"; };
+		1436592717407FAA00CE31CB /* neon_matrix_impl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = neon_matrix_impl.c; sourceTree = "<group>"; };
+		1436592817407FAA00CE31CB /* plane.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plane.c; sourceTree = "<group>"; };
+		1436592917407FAA00CE31CB /* quaternion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = quaternion.c; sourceTree = "<group>"; };
+		1436592A17407FAA00CE31CB /* ray2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ray2.c; sourceTree = "<group>"; };
+		1436592B17407FAA00CE31CB /* utility.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utility.c; sourceTree = "<group>"; };
+		1436592C17407FAA00CE31CB /* vec2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vec2.c; sourceTree = "<group>"; };
+		1436592D17407FAA00CE31CB /* vec3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vec3.c; sourceTree = "<group>"; };
+		1436592E17407FAA00CE31CB /* vec4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vec4.c; sourceTree = "<group>"; };
+		1436593E174080A000CE31CB /* GLShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShader.h; sourceTree = "<group>"; };
+		1436593F174080A000CE31CB /* GLShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLShader.m; sourceTree = "<group>"; };
+		143659411740BFA100CE31CB /* wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheel.png; sourceTree = "<group>"; };
 		1438CCB11732483F00AE0295 /* glimageprocess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glimageprocess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1438CCB41732483F00AE0295 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1438CCB61732483F00AE0295 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,16 +105,6 @@
 		14D55B1A1733AC530060CF4B /* GLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
 		14D55B1B1733AC530060CF4B /* GLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLView.m; sourceTree = "<group>"; };
 		14D55B1C1733AC530060CF4B /* vertext.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vertext.vsh; sourceTree = "<group>"; };
-		14D55B221733AC770060CF4B /* CC3Foundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Foundation.h; sourceTree = "<group>"; };
-		14D55B231733AC770060CF4B /* CC3Foundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CC3Foundation.m; sourceTree = "<group>"; };
-		14D55B241733AC770060CF4B /* CC3GLMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3GLMatrix.h; sourceTree = "<group>"; };
-		14D55B251733AC770060CF4B /* CC3GLMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CC3GLMatrix.m; sourceTree = "<group>"; };
-		14D55B261733AC770060CF4B /* CC3Kazmath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CC3Kazmath.c; sourceTree = "<group>"; };
-		14D55B271733AC770060CF4B /* CC3Kazmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Kazmath.h; sourceTree = "<group>"; };
-		14D55B281733AC770060CF4B /* CC3Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Logging.h; sourceTree = "<group>"; };
-		14D55B291733AC770060CF4B /* CC3Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3Math.h; sourceTree = "<group>"; };
-		14D55B2A1733AC770060CF4B /* CC3Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CC3Math.m; sourceTree = "<group>"; };
-		14D55B2B1733AC770060CF4B /* ccTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +123,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1436590C17407FAA00CE31CB /* kazmath */ = {
+			isa = PBXGroup;
+			children = (
+				1436590D17407FAA00CE31CB /* include */,
+				1436591E17407FAA00CE31CB /* src */,
+			);
+			path = kazmath;
+			sourceTree = "<group>";
+		};
+		1436590D17407FAA00CE31CB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1436590E17407FAA00CE31CB /* kazmath */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		1436590E17407FAA00CE31CB /* kazmath */ = {
+			isa = PBXGroup;
+			children = (
+				1436590F17407FAA00CE31CB /* aabb.h */,
+				1436591017407FAA00CE31CB /* GL */,
+				1436591317407FAA00CE31CB /* kazmath.h */,
+				1436591417407FAA00CE31CB /* mat3.h */,
+				1436591517407FAA00CE31CB /* mat4.h */,
+				1436591617407FAA00CE31CB /* neon_matrix_impl.h */,
+				1436591717407FAA00CE31CB /* plane.h */,
+				1436591817407FAA00CE31CB /* quaternion.h */,
+				1436591917407FAA00CE31CB /* ray2.h */,
+				1436591A17407FAA00CE31CB /* utility.h */,
+				1436591B17407FAA00CE31CB /* vec2.h */,
+				1436591C17407FAA00CE31CB /* vec3.h */,
+				1436591D17407FAA00CE31CB /* vec4.h */,
+			);
+			path = kazmath;
+			sourceTree = "<group>";
+		};
+		1436591017407FAA00CE31CB /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				1436591117407FAA00CE31CB /* mat4stack.h */,
+				1436591217407FAA00CE31CB /* matrix.h */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
+		1436591E17407FAA00CE31CB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1436591F17407FAA00CE31CB /* aabb.c */,
+				1436592017407FAA00CE31CB /* ChangeLog */,
+				1436592117407FAA00CE31CB /* CMakeLists.txt */,
+				1436592217407FAA00CE31CB /* GL */,
+				1436592517407FAA00CE31CB /* mat3.c */,
+				1436592617407FAA00CE31CB /* mat4.c */,
+				1436592717407FAA00CE31CB /* neon_matrix_impl.c */,
+				1436592817407FAA00CE31CB /* plane.c */,
+				1436592917407FAA00CE31CB /* quaternion.c */,
+				1436592A17407FAA00CE31CB /* ray2.c */,
+				1436592B17407FAA00CE31CB /* utility.c */,
+				1436592C17407FAA00CE31CB /* vec2.c */,
+				1436592D17407FAA00CE31CB /* vec3.c */,
+				1436592E17407FAA00CE31CB /* vec4.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		1436592217407FAA00CE31CB /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				1436592317407FAA00CE31CB /* mat4stack.c */,
+				1436592417407FAA00CE31CB /* matrix.c */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
 		1438CCA81732483F00AE0295 = {
 			isa = PBXGroup;
 			children = (
-				14D55B131733AC530060CF4B /* cocosmath */,
+				1436590C17407FAA00CE31CB /* kazmath */,
 				14D55B141733AC530060CF4B /* core */,
 				1438CCBA1732483F00AE0295 /* glimageprocess */,
 				1438CCB31732483F00AE0295 /* Frameworks */,
@@ -135,6 +246,7 @@
 		1438CCBB1732483F00AE0295 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				143659411740BFA100CE31CB /* wheel.png */,
 				14D55B0917338D860060CF4B /* cubemap1.png */,
 				1438CCBC1732483F00AE0295 /* glimageprocess-Info.plist */,
 				1438CCBD1732483F00AE0295 /* InfoPlist.strings */,
@@ -145,23 +257,6 @@
 				1438CCCA1732483F00AE0295 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		14D55B131733AC530060CF4B /* cocosmath */ = {
-			isa = PBXGroup;
-			children = (
-				14D55B221733AC770060CF4B /* CC3Foundation.h */,
-				14D55B231733AC770060CF4B /* CC3Foundation.m */,
-				14D55B241733AC770060CF4B /* CC3GLMatrix.h */,
-				14D55B251733AC770060CF4B /* CC3GLMatrix.m */,
-				14D55B261733AC770060CF4B /* CC3Kazmath.c */,
-				14D55B271733AC770060CF4B /* CC3Kazmath.h */,
-				14D55B281733AC770060CF4B /* CC3Logging.h */,
-				14D55B291733AC770060CF4B /* CC3Math.h */,
-				14D55B2A1733AC770060CF4B /* CC3Math.m */,
-				14D55B2B1733AC770060CF4B /* ccTypes.h */,
-			);
-			path = cocosmath;
 			sourceTree = "<group>";
 		};
 		14D55B141733AC530060CF4B /* core */ = {
@@ -175,6 +270,8 @@
 				14D55B1A1733AC530060CF4B /* GLView.h */,
 				14D55B1B1733AC530060CF4B /* GLView.m */,
 				14D55B1C1733AC530060CF4B /* vertext.vsh */,
+				1436593E174080A000CE31CB /* GLShader.h */,
+				1436593F174080A000CE31CB /* GLShader.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -238,6 +335,9 @@
 				14D55B0A17338D860060CF4B /* cubemap1.png in Resources */,
 				14D55B1D1733AC530060CF4B /* fragment.fsh in Resources */,
 				14D55B211733AC530060CF4B /* vertext.vsh in Resources */,
+				1436593017407FAA00CE31CB /* ChangeLog in Resources */,
+				1436593117407FAA00CE31CB /* CMakeLists.txt in Resources */,
+				143659421740BFA100CE31CB /* wheel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,10 +354,20 @@
 				14D55B1E1733AC530060CF4B /* GLProgram.m in Sources */,
 				14D55B1F1733AC530060CF4B /* GLTexture.m in Sources */,
 				14D55B201733AC530060CF4B /* GLView.m in Sources */,
-				14D55B2C1733AC770060CF4B /* CC3Foundation.m in Sources */,
-				14D55B2D1733AC770060CF4B /* CC3GLMatrix.m in Sources */,
-				14D55B2E1733AC770060CF4B /* CC3Kazmath.c in Sources */,
-				14D55B2F1733AC770060CF4B /* CC3Math.m in Sources */,
+				1436592F17407FAA00CE31CB /* aabb.c in Sources */,
+				1436593217407FAA00CE31CB /* mat4stack.c in Sources */,
+				1436593317407FAA00CE31CB /* matrix.c in Sources */,
+				1436593417407FAA00CE31CB /* mat3.c in Sources */,
+				1436593517407FAA00CE31CB /* mat4.c in Sources */,
+				1436593617407FAA00CE31CB /* neon_matrix_impl.c in Sources */,
+				1436593717407FAA00CE31CB /* plane.c in Sources */,
+				1436593817407FAA00CE31CB /* quaternion.c in Sources */,
+				1436593917407FAA00CE31CB /* ray2.c in Sources */,
+				1436593A17407FAA00CE31CB /* utility.c in Sources */,
+				1436593B17407FAA00CE31CB /* vec2.c in Sources */,
+				1436593C17407FAA00CE31CB /* vec3.c in Sources */,
+				1436593D17407FAA00CE31CB /* vec4.c in Sources */,
+				14365940174080A000CE31CB /* GLShader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +452,11 @@
 		1438CCD51732483F00AE0295 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "glimageprocess/glimageprocess-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/kazmath/include/**";
 				INFOPLIST_FILE = "glimageprocess/glimageprocess-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -354,9 +466,11 @@
 		1438CCD61732483F00AE0295 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "glimageprocess/glimageprocess-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/kazmath/include/**";
 				INFOPLIST_FILE = "glimageprocess/glimageprocess-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

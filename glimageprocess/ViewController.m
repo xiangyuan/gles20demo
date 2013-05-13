@@ -10,8 +10,6 @@
 #import "GLView.h"
 #import "GLProgram.h"
 #import "GLTexture.h"
-#import "CC3GLMatrix.h"
-#import "CC3Foundation.h"
 #import "GLTexture.h"
 
 @interface ViewController ()
@@ -27,23 +25,23 @@
 //    -0.5,-0.5,0
 //};
 const float vertexes[] = {
-    1,-1,0,
-    1,1,0,
-    -1,1,0,
-    -1,-1,0
+    0,0.,0,
+    1,0,0,
+    0,1.0,0,
+    1,1,0
 };
 
 //dot index
 const GLubyte indices[] = {
     0,1,2,
-    2,3,0
+    2,3,1
 };
 
 const float texturecoords[] = {
-    0.0,1.0,
-    1.0,1.0,
-    1.0,0.0,
-    0.0,0.0
+    0.0,0.75,
+    0.75,0.75,
+    0.0,0.0,
+    0.75,0.0
 };
 
 
@@ -71,10 +69,10 @@ const float texturecoords[] = {
 
 -(void) setup {
     if (glProgram == nil) {
-        glProgram = [[GLProgram alloc]initWithVertexShader:@"vertext" withFragmentShader:@"fragment"];
+        glProgram = [GLProgram initWithVertexShader:@"vertext.vsh" withFragmentShader:@"fragment.fsh"];
     }
     if (texture == nil) {
-        texture = [[GLTexture alloc]initTexture:@"cubemap1.png"];
+        texture = [[GLTexture alloc]initTexture:@"wheel.png"];
     }
 }
 
@@ -104,6 +102,15 @@ const float texturecoords[] = {
     glEnable(GL_CULL_FACE);// perfomance important
 //    glFrontFace(GL_CCW);
     glViewport(0, 0, self.view.frame.size.width, self.view.frame.size.height);//must be filled
+    kmGLMatrixMode(KM_GL_PROJECTION);
+    kmGLLoadIdentity();
+    // clip the world space
+    kmMat4 orthoMatrix;
+    kmMat4OrthographicProjection(&orthoMatrix, 0, self.view.frame.size.width / self.view.contentScaleFactor, 0, self.view.frame.size.height / self.view.contentScaleFactor, -1024, 1024);
+    kmGLMultMatrix(&orthoMatrix);
+    kmGLMatrixMode(KM_GL_MODELVIEW);
+    kmGLLoadIdentity();
+    
     glBindBuffer(GL_ARRAY_BUFFER, vboIndex[0]);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vboIndex[1]);
 //    glBindBuffer(GL_ARRAY_BUFFER, vboIndex[2]);
@@ -113,31 +120,14 @@ const float texturecoords[] = {
     GLuint a_position = [glProgram attribute:@"a_position"];
     GLuint texture_coord = [glProgram attribute:@"a_texCoord"];
 
-    GLuint u_projection = [glProgram uniform:@"u_pMatrix"];
-    GLuint u_modelView = [glProgram uniform:@"u_mvMatrix"];
+//    GLuint u_projection = [glProgram uniform:@"u_pMatrix"];
+//    GLuint u_modelView = [glProgram uniform:@"u_mvMatrix"];
     GLuint u_sample = [glProgram uniform:@"s_texture"];
     
      glUniform1i(u_sample, 0);
     GLuint u_color = [glProgram uniform:@"u_multiplyColor"];
     
     glUniform4f(u_color, 0.0, 0.4, 1.0,0.5);
-    
-    CC3GLMatrix *projection = [CC3GLMatrix identity];
-    float h = 4 * self.view.frame.size.height / self.view.frame.size.width;
-    [projection populateFromFrustumLeft:-2 andRight:2 andBottom:-h / 3 andTop:h / 3 andNear:4 andFar:10];
-    glUniformMatrix4fv(u_projection, 1, FALSE, projection.glMatrix);
-    
-    
-    
-    //4. model view matrix
-    CC3GLMatrix *modelView = [CC3GLMatrix matrix];
-    [modelView populateFromTranslation:CC3VectorMake(sin(CACurrentMediaTime()), 0, -4)];
-    // 5. rotate
-    //    _currentRotation += displayLink.duration * 90;
-    //    [modelView rotateBy:CC3VectorMake(_currentRotation, _currentRotation, 0)];
-    
-    glUniformMatrix4fv(u_modelView, 1, FALSE, modelView.glMatrix);
-
     
     // 2. set glsl data
 //    NSLog(@"%ld %ld",sizeof(float),sizeof(GLubyte));

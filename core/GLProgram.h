@@ -7,20 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef enum{
-    VertexLog = 1,
-    FragmentLog = 2,
-    ProgramLog = 3
-}GLLogType;
+#import "GLShader.h"
 
 @interface GLProgram : NSObject
+{
+    GLShader * vertexShader,*fragmentShader;
+    GLuint program;
+}
 
+@property(nonatomic,readonly) GLuint program;
 /**
  *@param the vertex shader name
  *@param fragmentShaderName the fragment shader file name
  */
--(id)initWithVertexShader:(NSString*)vertexShaderFileName withFragmentShader:(NSString*)fragmentShaderName;
++(id)initWithVertexShader:(NSString*)vertexShaderFileName withFragmentShader:(NSString*)fragmentShaderName;
 
 /**
  * link the program
@@ -40,12 +40,17 @@ typedef enum{
  */
 -(GLuint) attribute:(NSString*) attributeName;
 
-/**
- * @param infoType
- *        1. the vertex shader log information
- *        2. the shader log information
- *        3. the program log information
- * return the log info message
- */
--(NSString*) logInfo:(GLLogType) infoType;
+///**
+//typedef enum{
+//    VertexLog = 1,
+//    FragmentLog = 2,
+//    ProgramLog = 3
+//}GLLogType;
+// * @param infoType
+// *        1. the vertex shader log information
+// *        2. the shader log information
+// *        3. the program log information
+// * return the log info message
+// */
+//-(NSString*) logInfo:(GLLogType) infoType;
 @end
